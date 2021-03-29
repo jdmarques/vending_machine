@@ -15,6 +15,14 @@ public:
     Vending_machine(QWidget *parent = nullptr);
     ~Vending_machine();
 
+    double m_user_balance;
+    double m_cost;
+
+    void calculate_change();
+
+private slots:
+    void on_button_buy_released();
+
 private:
     Ui::Vending_machine *ui;
 };
